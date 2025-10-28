@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pathfinders Club - Building character, developing leadership, and growing faith through adventure">
+    <title>Pathfinders Club</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏕️</text></svg>">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!--
+    ========================================
+    CUSTOMIZATION INSTRUCTIONS
+    ========================================
+    
+    1. COLORS: Edit CSS variables in styles.css (lines 8-12)
+       --color-white: #FFFFFF
+       --color-green: #006837
+       --color-gold: #D4AF37
+    
+    2. TEXT CONTENT: Edit directly in HTML sections below
+       - Club name: Line 48
+       - Hero text: Lines 69-71
+       - About content: Lines 83-150
+       - Events: Lines 235-310
+       - Footer contact: Lines 425-443
+    
+    3. IMAGES: Replace placeholder URLs in:
+       - Gallery section (lines 318-371)
+       - Update src attributes with your image paths
+    
+    4. MEETING INFO: Update in About section (lines 143-148)
+    
+    ========================================
+    -->
+
+    <!-- Header / Navigation -->
+    <header id="header">
+        <nav class="nav-container">
+            <div class="logo-area">
+                <div class="logo-icon">🏕️</div>
+                <span class="site-title">Asian Quarters Pathfinders Club</span>
+            </div>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#programs">Programs</a>
+                <a href="#events">Events</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#join">Join</a>
+            </div>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Welcome to the Pacesetters Pathfinders Club</h1>
+                <p class="hero-subtitle">Building character, developing leadership, and growing faith through adventure</p>
+                <a href="#join" class="cta-button">Join Our Club Today</a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section section-gray">
+            <div class="container">
+                <h2 class="section-title">About Our Club</h2>
+                
+                <div class="about-grid">
+                    <div class="card">
+                        <h3>Our Mission</h3>
+                        <p>The Pathfinder Club is a church-centered spiritual-recreational-activity program designed for young people ages 10-15. We aim to develop Christian character, leadership skills, and a love for God and nature through hands-on activities and community service.</p>
+                    </div>
+                    
+                    <div class="card">
+                        <h3>Our Values</h3>
+                        <ul class="value-list">
+                            <li>
+                                <span class="value-icon">✦</span>
+                                <div>
+                                    <strong>Spiritual:</strong> Growing in faith and relationship with God
+                                </div>
+                            </li>
+                            <li>
+                                <span class="value-icon">✦</span>
+                                <div>
+                                    <strong>Physical:</strong> Developing healthy bodies and outdoor skills
+                                </div>
+                            </li>
+                            <li>
+                                <span class="value-icon">✦</span>
+                                <div>
+                                    <strong>Mental:</strong> Encouraging learning and critical thinking
+                                </div>
+                            </li>
+                            <li>
+                                <span class="value-icon">✦</span>
+                                <div>
+                                    <strong>Social:</strong> Building friendships and serving others
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="card meeting-times">
+                    <h3>Meeting Times</h3>
+                    <p class="meeting-info">
+                        <strong>Every Sunday:</strong> 9:00 AM - 12:00 PM<br>
+                        <strong>Age Range:</strong> 10-15 years old
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs & Honors Section -->
+        <section id="programs" class="section">
+            <div class="container-wide">
+                <h2 class="section-title">Programs & Honors</h2>
+                
+                <div class="programs-grid">
+                    <div class="program-card">
+                        <div class="program-icon">🏕️</div>
+                        <h3>Camping & Outdoor Skills</h3>
+                        <p class="program-description short">Learn essential outdoor skills including tent setup, fire building...</p>
+                        <p class="program-description full">Learn essential outdoor skills including tent setup, fire building, hiking, and wilderness survival. Our experienced leaders guide Pathfinders through hands-on outdoor adventures that build confidence and self-reliance.</p>
+                        <button class="learn-more-btn" data-index="0" aria-expanded="false">Learn more</button>
+                    </div>
+                    
+                    <div class="program-card">
+                        <div class="program-icon">🤝</div>
+                        <h3>Community Service</h3>
+                        <p class="program-description short">Make a difference through service projects that help our local...</p>
+                        <p class="program-description full">Make a difference through service projects that help our local community and develop leadership skills. From food banks to park cleanups, Pathfinders learn the joy of serving others and making a positive impact.</p>
+                        <button class="learn-more-btn" data-index="1" aria-expanded="false">Learn more</button>
+                    </div>
+                    
+                    <div class="program-card">
+                        <div class="program-icon">🏆</div>
+                        <h3>Honor Classes</h3>
+                        <p class="program-description short">Earn honors in areas like nature study, arts and crafts...</p>
+                        <p class="program-description full">Earn honors in areas like nature study, arts and crafts, health and science, and outdoor industries. Our comprehensive honor program encourages Pathfinders to explore their interests and develop new skills.</p>
+                        <button class="learn-more-btn" data-index="2" aria-expanded="false">Learn more</button>
+                    </div>
+                    
+                    <div class="program-card">
+                        <div class="program-icon">📖</div>
+                        <h3>Spiritual Development</h3>
+                        <p class="program-description short">Grow in faith through Bible study, worship services...</p>
+                        <p class="program-description full">Grow in faith through Bible study, worship services, prayer groups, and spiritual mentorship. We create a supportive environment where young people can explore their faith and build a personal relationship with God.</p>
+                        <button class="learn-more-btn" data-index="3" aria-expanded="false">Learn more</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Section -->
+        <section id="events" class="section section-gray">
+            <div class="container">
+                <h2 class="section-title">Upcoming Events</h2>
+                
+                <div class="event-filter">
+                    <button class="filter-btn active" data-filter="upcoming">Upcoming</button>
+                    <button class="filter-btn" data-filter="past">Past Events</button>
+                </div>
+                
+                <div class="events-list">
+                    <article class="event-card" data-status="upcoming" data-date="2025-11-15">
+                        <div class="event-content">
+                            <div class="event-details">
+                                <h3>Monthly Campout</h3>
+                                <div class="event-meta">
+                                    <div class="meta-item">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                            <line x1="16" y1="2" x2="16" y2="6"/>
+                                            <line x1="8" y1="2" x2="8" y2="6"/>
+                                            <line x1="3" y1="10" x2="21" y2="10"/>
+                                        </svg>
+                                        <span>Friday, November 15, 2025</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="10"/>
+                                            <polyline points="12 6 12 12 16 14"/>
+                                        </svg>
+                                        <span>6:00 PM - Sunday 2:00 PM</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                            <circle cx="12" cy="10" r="3"/>
+                                        </svg>
+                                        <span>Pine Ridge Campground</span>
+                                    </div>
+                                </div>
+                                <p class="event-description">Join us for a weekend of outdoor adventure, worship, and fellowship. Bring your tent, sleeping bag, and sense of adventure!</p>
+                            </div>
+                            <button class="add-calendar-btn" data-event="0">Add to Calendar</button>
+                        </div>
+                    </article>
+
+                    <article class="event-card" data-status="upcoming" data-date="2025-11-22">
+                        <div class="event-content">
+                            <div class="event-details">
+                                <h3>Community Service Day</h3>
+                                <div class="event-meta">
+                                    <div class="meta-item">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                            <line x1="16" y1="2" x2="16" y2="6"/>
+                                            <line x1="8" y1="2" x2="8" y2="6"/>
+                                            <line x1="3" y1="10" x2="21" y2="10"/>
+                                        </svg>
+                                        <span>Saturday, November 22, 2025</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="10"/>
+                                            <polyline points="12 6 12 12 16 14"/>
+                                        </svg>
+                                        <span>9:00 AM - 2:00 PM</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                            <circle cx="12" cy="10" r="3"/>
+                                        </svg>
+                                        <span>Local Food Bank</span>
+                                    </div>
+                                </div>
+                                <p class="event-description">Help us serve our community by volunteering at the food bank. We'll sort donations, pack boxes, and make a real difference.</p>
+                            </div>
+                            <button class="add-calendar-btn" data-event="1">Add to Calendar</button>
+                        </div>
+                    </article>
+
+                    <article class="event-card" data-status="upcoming" data-date="2025-12-06">
+                        <div class="event-content">
+                            <div class="event-details">
+                                <h3>Investiture Ceremony</h3>
+                                <div class="event-meta">
+                                    <div class="meta-item">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                            <line x1="16" y1="2" x2="16" y2="6"/>
+                                            <line x1="8" y1="2" x2="8" y2="6"/>
+                                            <line x1="3" y1="10" x2="21" y2="10"/>
+                                        </svg>
+                                        <span>Saturday, December 6, 2025</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="10"/>
+                                            <polyline points="12 6 12 12 16 14"/>
+                                        </svg>
+                                        <span>10:00 AM - 12:00 PM</span>
+                                    </div>
+                                    <div class="meta-item">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                            <circle cx="12" cy="10" r="3"/>
+                                        </svg>
+                                        <span>Church Auditorium</span>
+                                    </div>
+                                </div>
+                                <p class="event-description">Celebrate achievements as Pathfinders receive their honors and badges. Families and friends welcome!</p>
+                            </div>
+                            <button class="add-calendar-btn" data-event="2">Add to Calendar</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="section">
+            <div class="container-wide">
+                <h2 class="section-title">Our Gallery</h2>
+                
+                <div class="gallery-grid">
+                    <button class="gallery-item" data-index="0" aria-label="Open image 1 in lightbox">
+                        <img src="Pathfinders Pictures/pauline.jpg" 
+                             alt="Pathfinders camping adventure in the wilderness" 
+                             loading="lazy">
+                    </button>
+                    
+                    <button class="gallery-item" data-index="1" aria-label="Open image 2 in lightbox">
+                        <img src="Pathfinders Pictures/Philip.jpg" 
+                             alt="Community service project helping others" 
+                             loading="lazy">
+                    </button>
+                    
+                    <button class="gallery-item" data-index="2" aria-label="Open image 3 in lightbox">
+                        <img src="Pathfinders Pictures/junior with flag.jpg" 
+                             alt="Group activities and team building exercises" 
+                             loading="lazy">
+                    </button>
+                    
+                    <button class="gallery-item" data-index="3" aria-label="Open image 4 in lightbox">
+                        <img src="Pathfinders Pictures/elder with pastor.jpg" 
+                             alt="Badge ceremony celebrating achievements" 
+                             loading="lazy">
+                    </button>
+                    
+                    <button class="gallery-item" data-index="4" aria-label="Open image 5 in lightbox">
+                        <img src="Pathfinders Pictures/Philip teaching adventures.jpg" 
+                             alt="Outdoor skills training and learning" 
+                             loading="lazy">
+                    </button>
+                    
+                    <button class="gallery-item" data-index="5" aria-label="Open image 6 in lightbox">
+                        <img src="Pathfinders Pictures/pathfinders fair.jpg" 
+                             alt="Fellowship and worship time together" 
+                             loading="lazy">
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+            <button class="lightbox-close" aria-label="Close lightbox">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"/>
+                    <line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+            </button>
+            <button class="lightbox-prev" aria-label="Previous image">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 18 9 12 15 6"/>
+                </svg>
+            </button>
+            <button class="lightbox-next" aria-label="Next image">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"/>
+                </svg>
+            </button>
+            <img id="lightbox-img" src="" alt="">
+        </div>
+
+        <!-- Join / Contact Section -->
+        <section id="join" class="section section-gray">
+            <div class="container form-container">
+                <h2 class="section-title">Join Our Club</h2>
+                <p class="form-intro">Ready to start your Pathfinder adventure? Fill out the form below and we'll get in touch!</p>
+                
+                <form id="contact-form" class="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="name">Full Name <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required aria-required="true">
+                        <span class="error-message" id="name-error" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="guardian">Parent/Guardian Name (if under 18)</label>
+                        <input type="text" id="guardian" name="guardian">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required aria-required="true">
+                            <span class="error-message" id="email-error" role="alert"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" required aria-required="true">
+                            <span class="error-message" id="phone-error" role="alert"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="age">Age <span class="required">*</span></label>
+                        <input type="number" id="age" name="age" min="10" max="15" required aria-required="true">
+                        <span class="error-message" id="age-error" role="alert"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message (Optional)</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <input type="checkbox" id="consent" name="consent" required aria-required="true">
+                        <label for="consent" class="checkbox-label">
+                            I agree to the collection and use of my personal information for Pathfinders Club registration purposes. <span class="required">*</span>
+                        </label>
+                        <span class="error-message" id="consent-error" role="alert"></span>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit Application</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Success Modal -->
+        <div class="modal" id="success-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+            <div class="modal-content">
+                <svg class="modal-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                    <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                <h3 id="modal-title">Thank You!</h3>
+                <p>Your application has been submitted successfully. We'll be in touch soon!</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-wide">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>Pathfinders Club</h3>
+                    <p>Building character, developing leadership, and growing faith through adventure.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <nav class="footer-links">
+                        <a href="#about">About</a>
+                        <a href="#programs">Programs</a>
+                        <a href="#events">Events</a>
+                        <a href="#gallery">Gallery</a>
+                        <a href="#join">Join</a>
+                    </nav>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                            <span>aqpathfinders@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                            <span>(555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span>Makupa Primary School, Mombasa, Kenya</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Pathfinders Club. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
