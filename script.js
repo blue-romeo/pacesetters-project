@@ -254,6 +254,63 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+// ========== TESTIMONIALS SLIDER ========== 
+const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+const sliderPrev = document.querySelector('.slider-prev');
+const sliderNext = document.querySelector('.slider-next');
+const dots = document.querySelectorAll('.dot');
+let currentSlide = 0;
+
+function showSlide(index) {
+    testimonialSlides.forEach(slide => slide.classList.remove('active'));
+    dots.forEach(dot => dot.classList.remove('active'));
+    
+    if (index >= testimonialSlides.length) {
+        currentSlide = 0;
+    } else if (index < 0) {
+        currentSlide = testimonialSlides.length - 1;
+    } else {
+        currentSlide = index;
+    }
+    
+    testimonialSlides[currentSlide].classList.add('active');
+    dots[currentSlide].classList.add('active');
+}
+
+if (sliderPrev && sliderNext) {
+    sliderPrev.addEventListener('click', () => {
+        showSlide(currentSlide - 1);
+    });
+
+    sliderNext.addEventListener('click', () => {
+        showSlide(currentSlide + 1);
+    });
+}
+
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        showSlide(index);
+    });
+});
+
+// Auto-advance testimonials every 7 seconds
+let testimonialInterval = setInterval(() => {
+    showSlide(currentSlide + 1);
+}, 7000);
+
+// Pause auto-advance on hover
+const testimonialSlider = document.querySelector('.testimonial-slider');
+if (testimonialSlider) {
+    testimonialSlider.addEventListener('mouseenter', () => {
+        clearInterval(testimonialInterval);
+    });
+
+    testimonialSlider.addEventListener('mouseleave', () => {
+        testimonialInterval = setInterval(() => {
+            showSlide(currentSlide + 1);
+        }, 7000);
+    });
+}
 // ========== FORM VALIDATION ========== 
 const form = document.getElementById('contact-form');
 const successModal = document.getElementById('success-modal');
