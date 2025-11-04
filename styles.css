@@ -854,6 +854,74 @@ button {
     font-size: 0.95rem;
 }
 
+/* ========== FAQ SECTION ========== */
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: var(--color-white);
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.faq-question {
+    width: 100%;
+    padding: 1.5rem;
+    background: none;
+    border: none;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    color: var(--color-green);
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: background 0.3s ease;
+}
+
+.faq-question:hover,
+.faq-question:focus {
+    background: var(--color-gray-50);
+}
+
+.faq-question span {
+    flex: 1;
+}
+
+.faq-icon {
+    width: 24px;
+    height: 24px;
+    color: var(--color-gold);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 1rem;
+}
+
+.faq-question[aria-expanded="true"] .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.faq-answer.active {
+    max-height: 500px;
+    padding: 0 1.5rem 1.5rem;
+}
+
+.faq-answer p {
+    color: var(--color-gray-700);
+    line-height: 1.7;
+}
+
 /* ========== FORM SECTION ========== */
 .form-container {
     max-width: 750px;

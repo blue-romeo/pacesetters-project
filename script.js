@@ -311,6 +311,29 @@ if (testimonialSlider) {
         }, 7000);
     });
 }
+
+
+// ========== FAQ ACCORDION ========== 
+const faqQuestions = document.querySelectorAll('.faq-question');
+
+faqQuestions.forEach(question => {
+    question.addEventListener('click', function() {
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        const answer = this.nextElementSibling;
+        
+        // Close all other FAQs
+        faqQuestions.forEach(q => {
+            if (q !== this) {
+                q.setAttribute('aria-expanded', 'false');
+                q.nextElementSibling.classList.remove('active');
+            }
+        });
+        
+        // Toggle current FAQ
+        this.setAttribute('aria-expanded', !isExpanded);
+        answer.classList.toggle('active');
+    });
+});
 // ========== FORM VALIDATION ========== 
 const form = document.getElementById('contact-form');
 const successModal = document.getElementById('success-modal');
